@@ -11,14 +11,12 @@ export default function Detail({ route, navigation }) {
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
       >
-        {/* Gambar utama */}
         <View style={styles.imageWrapper}>
           <Image
             source={{ uri: item.coffee_poster }}
             style={styles.poster}
             resizeMode="cover"
           />
-          {/* Tombol Back */}
           <TouchableOpacity
             style={styles.backButton}
             onPress={() => navigation.goBack()}
@@ -26,8 +24,6 @@ export default function Detail({ route, navigation }) {
             <Ionicons name="arrow-back" size={22} color="#fff" />
           </TouchableOpacity>
         </View>
-
-        {/* Card deskripsi */}
         <View style={styles.card}>
           <Text style={styles.title}>{item.coffee_title}</Text>
           <Text style={styles.desc}>{item.coffee_detail}</Text>
@@ -49,7 +45,7 @@ const styles = StyleSheet.create({
   imageWrapper: {
     width: "100%",
     height: 350,
-    backgroundColor: "#000", // warna fallback
+    backgroundColor: "#000", 
   },
   poster: {
     width: "100%",
@@ -88,3 +84,4 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 });
+
